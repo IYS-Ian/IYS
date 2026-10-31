@@ -54,6 +54,15 @@ await fetch('/api/auth/register', {
 }).then(r => r.json()).then(console.log);
 ```
 
+## 重要：请用 Render 的网址访问网站
+
+你的 GitHub Pages 只能托管静态文件，没有后端。如果继续从 `*.github.io` 打开注册/登录页，
+页面里的 `fetch('/api/auth/register')` 会请求 GitHub 的服务器并得到 404。
+
+所以上线后请把 **Render 地址当作正式网址**；以后绑定自定义域名，也指向 Render。
+如果你确实想保留 GitHub Pages 当主站、Render 只当 API，需要改 `account.js` 的请求地址
+并配置跨域 Cookie，告诉我我再改。
+
 ## 免费档的三个限制（重要）
 
 1. **会休眠**：15 分钟没人访问就暂停，下次打开要等 30~60 秒；
