@@ -104,6 +104,39 @@ a:focus-visible {
     opacity: 1;
 }
 
+.nav-links .account-nav-link {
+    margin-left: 8px;
+    padding: 6px 13px;
+    border: 1px solid rgb(0 102 204 / 32%);
+    border-radius: 999px;
+    background: #eef6ff;
+    color: var(--blue);
+    font-weight: 600;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+.nav-links .account-signup-link {
+    margin-left: -20px;
+    background: var(--blue);
+    color: #fff;
+}
+
+.nav-links .account-signup-link:hover {
+    border-color: #0077ed;
+    background: #0077ed;
+}
+
+.nav-links .account-nav-link:not(.account-signup-link):hover {
+    border-color: var(--blue);
+    background: #e2f0ff;
+    text-decoration: none;
+}
+
+.nav-links .account-nav-link:focus-visible {
+    border-radius: 999px;
+}
+
 .hero,
 .page-hero {
     padding: 112px 24px 104px;
@@ -569,8 +602,17 @@ article.legal-policy h2 {
     }
 
     .nav-links {
-        gap: 16px;
+        gap: 12px;
         font-size: 12px;
+    }
+
+    .nav-links .account-nav-link {
+        margin-left: 4px;
+        padding: 5px 8px;
+    }
+
+    .nav-links .account-signup-link {
+        margin-left: -8px;
     }
 
     .hero,
@@ -681,7 +723,21 @@ article.legal-policy h2 {
 
 @media (max-width: 390px) {
     .nav-links {
-        gap: 11px;
+        gap: 5px;
+    }
+
+    .nav-links {
+        gap: 4px;
+        font-size: 11px;
+    }
+
+    .nav-links .account-nav-link {
+        margin-left: 0;
+        padding: 4px 5px;
+    }
+
+    .nav-links .account-signup-link {
+        margin-left: -3px;
     }
 
     .brand {
@@ -690,5 +746,17 @@ article.legal-policy h2 {
 
     .product-heading {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 340px) {
+    .navigation {
+        flex-wrap: wrap;
+        padding: 8px 0;
+    }
+
+    .navigation .nav-links {
+        width: 100%;
+        justify-content: space-between;
     }
 }
