@@ -1,0 +1,13 @@
+.git
+.gitignore
+.DS_Store
+.tmp-npm-cache
+*.log
+
+# 依赖、数据库、密钥都不进镜像
+server/node_modules
+server/data
+server/.env
+
+# 文档不需要进镜像
+DEPLOYMENT.md

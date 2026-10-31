@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create an IYS account.">
+    <title>Sign Up | IYS Account</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="account.js" defer></script>
+</head>
+<body class="corner-background">
+    <header class="site-header">
+        <nav class="navigation" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="IYS home">IYS</a>
+            <div class="nav-links">
+                <a href="IYS Software.html">Software</a>
+                <a href="IYS Studio.html">Studio</a>
+                <a href="Ian.html">About me</a>
+                <a href="mailto:iys-ian@outlook.com">Contact</a>
+                <a class="current" href="IYS Account Sign In.html" aria-current="page">Account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="account-section content-width">
+        <section class="account-card" aria-labelledby="account-heading">
+            <p class="eyebrow">Join the community</p>
+            <h1 id="account-heading">Create your account.</h1>
+            <p class="account-intro">Set up an IYS account to get started with member features.</p>
+
+            <form class="account-form" data-account-form="signup">
+                <label for="signup-name">Name</label>
+                <input id="signup-name" name="name" type="text" autocomplete="name" required>
+
+                <label for="signup-email">Email address</label>
+                <input id="signup-email" name="email" type="email" autocomplete="email" required>
+
+                <label for="signup-password">Password</label>
+                <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+
+                <label for="signup-password-confirmation">Confirm password</label>
+                <input id="signup-password-confirmation" name="password-confirmation" type="password" autocomplete="new-password" minlength="8" required>
+
+                <p class="account-feedback" role="alert" hidden></p>
+                <button class="account-submit" type="submit">Create account</button>
+            </form>
+
+            <p class="account-switch">Already have an account? <a href="IYS Account Sign In.html">Sign in</a>.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p><a href="index.html">Back to IYS</a></p>
+            <p class="copyright">© IYS. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to your IYS account.">
+    <title>Sign In | IYS Account</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="account.js" defer></script>
+</head>
+<body class="corner-background">
+    <header class="site-header">
+        <nav class="navigation" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="IYS home">IYS</a>
+            <div class="nav-links">
+                <a href="IYS Software.html">Software</a>
+                <a href="IYS Studio.html">Studio</a>
+                <a href="Ian.html">About me</a>
+                <a href="mailto:iys-ian@outlook.com">Contact</a>
+                <a class="current" href="IYS Account Sign In.html" aria-current="page">Account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="account-section content-width">
+        <section class="account-card" aria-labelledby="account-heading">
+            <p class="eyebrow">Welcome back</p>
+            <h1 id="account-heading">Sign in to IYS.</h1>
+            <p class="account-intro">Sign in to access your IYS account and member features.</p>
+
+            <form class="account-form" data-account-form="signin">
+                <label for="signin-email">Email address</label>
+                <input id="signin-email" name="email" type="email" autocomplete="email" required>
+
+                <label for="signin-password">Password</label>
+                <input id="signin-password" name="password" type="password" autocomplete="current-password" required>
+
+                <p class="account-feedback" role="alert" hidden></p>
+                <button class="account-submit" type="submit">Sign in</button>
+            </form>
+
+            <p class="account-switch">New to IYS? <a href="IYS Account Sign Up.html">Create an account</a>.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p><a href="index.html">Back to IYS</a></p>
+            <p class="copyright">© IYS. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+.env
+.tmp-npm-cache/
+server/node_modules/
+server/data/
+server/.env

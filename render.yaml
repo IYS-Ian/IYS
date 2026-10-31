@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: iys
+    runtime: docker
+    plan: free
+    # 国内访问建议新加坡；如果创建时报区域不支持，改成 oregon 或删掉这一行
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: TRUST_PROXY
+        value: "1"
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: SERVE_STATIC
+        value: "true"
+
+    # 免费实例没有持久磁盘：重启或重新部署后 server/data/iys.db 会丢。
+    # 升级到付费磁盘后取消下面注释，并把 DATABASE_PATH 改成 /var/data/iys.db：
+    #
+    # disk:
+    #   name: iys-data
+    #   mountPath: /var/data
+    #   sizeGB: 1
+    #
+    # - key: DATABASE_PATH
+    #   value: /var/data/iys.db
