@@ -13,3 +13,4 @@ server/.env
 
 # 文档不需要进镜像
 DEPLOYMENT.md
+.ssh
