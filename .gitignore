@@ -2,6 +2,8 @@
 *.log
 .env
 .tmp-npm-cache/
+.git-token
+.git-askpass.sh
 server/node_modules/
 server/data/
 server/.env
