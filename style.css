@@ -515,6 +515,11 @@ article.legal-policy h2 {
     outline-offset: 2px;
 }
 
+.account-forgot-password {
+    justify-self: end;
+    font-size: 14px;
+}
+
 .account-submit {
     min-height: 46px;
     margin-top: 14px;

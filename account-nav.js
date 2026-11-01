@@ -17,16 +17,21 @@
     }
 
     const data = await response.json();
-    const email = data?.user?.email;
-    if (typeof email !== 'string' || email.length === 0) {
-      throw new Error('Account session response did not include a valid user email.');
+    const user = data?.user;
+    const displayName = user?.displayName;
+    const email = user?.email;
+    const name = typeof displayName === 'string' && displayName.trim()
+      ? displayName.trim()
+      : email;
+    if (typeof name !== 'string' || name.length === 0) {
+      throw new Error('Account session response did not include a valid user name.');
     }
 
     const userLabel = document.createElement('span');
     userLabel.className = 'account-nav-link account-nav-user';
-    userLabel.textContent = email;
-    userLabel.title = `Signed in as ${email}`;
-    userLabel.setAttribute('aria-label', `Signed in as ${email}`);
+    userLabel.textContent = name;
+    userLabel.title = `Signed in as ${name}`;
+    userLabel.setAttribute('aria-label', `Signed in as ${name}`);
 
     signInLink.replaceWith(userLabel);
     signUpLink.remove();
